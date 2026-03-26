@@ -1,0 +1,34 @@
+:root {
+  font-family: "Istok Web", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #111827;
+  -bs-secondary: #BABABA;
+  background-color: #f8fafc;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  font-family: "Istok Web", "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
+}
+
+button,
+input,
+textarea,
+select {
+  font-family: "Istok Web", "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
+}
+
+a {
+  text-decoration: none;
+}
