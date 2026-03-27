@@ -1,6 +1,8 @@
 .projectsSection {
   padding: 5rem 0;
-  background-color: #f8fafc;
+  background-image: url('/project-bg.png');
+  background-size: cover;
+  background-position: center;
 }
 
 .kicker {

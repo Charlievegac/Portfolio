@@ -3,7 +3,7 @@
   line-height: 1.5;
   font-weight: 400;
   color: #111827;
-  -bs-secondary: #BABABA;
+  --bs-secondary: #BABABA;
   background-color: #f8fafc;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -27,6 +27,34 @@ input,
 textarea,
 select {
   font-family: "Istok Web", "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
+}
+
+.form-control:focus {
+  border-color: #22c55e !important;
+  box-shadow: 0 0 0 0.2rem rgba(34, 197, 94, 0.25) !important;
+}
+
+.btn.app-button:focus,
+.btn.app-button:focus-visible,
+.btn.app-button:active {
+  border-color: #22c55e !important;
+  box-shadow: 0 0 0 0.2rem rgba(34, 197, 94, 0.25) !important;
+  color: #fff !important;
+}
+
+.project-row {
+  transition: border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+}
+
+.project-row:hover {
+  border-color: #22c55e !important;
+  box-shadow: 0 0 0 0.2rem rgba(34, 197, 94, 0.18) !important;
+}
+
+@media (max-width: 1200px) {
+  .project-description {
+    display: none;
+  }
 }
 
 a {

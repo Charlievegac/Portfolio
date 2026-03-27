@@ -152,7 +152,7 @@ const MarqueeRow = ({ row }: MarqueeRowProps): JSX.Element => {
   );
 };
 
-const SkillsSection = (): JSX.Element => {
+const Skills = (): JSX.Element => {
   return (
     <section className="text-light" style={{ background: '#000000', paddingTop: '6rem', paddingBottom: '6rem' }}>
       <div className="mx-auto" style={{ width: 'min(97%, 1500px)' }}>
@@ -178,4 +178,4 @@ const SkillsSection = (): JSX.Element => {
   );
 };
 
-export default SkillsSection;
+export default Skills;

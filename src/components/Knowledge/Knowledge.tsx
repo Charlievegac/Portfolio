@@ -44,7 +44,7 @@ const skillCards: SkillCard[] = [
   }
 ];
 
-const KnowledgeSection = (): JSX.Element => {
+const Knowledge = (): JSX.Element => {
   const viewportRef = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState<number>(0);
   const repeatedCards = useMemo(
@@ -114,7 +114,7 @@ const KnowledgeSection = (): JSX.Element => {
               <p
                 className="mb-2"
                 style={{
-                  color: '#a3e635',
+                  color: '#22c55e',
                   fontSize: 'clamp(1rem, 1.2vw, 1.4rem)',
                   fontWeight: 500,
                   letterSpacing: '0.08em'
@@ -187,4 +187,4 @@ const KnowledgeSection = (): JSX.Element => {
   );
 };
 
-export default KnowledgeSection;
+export default Knowledge;

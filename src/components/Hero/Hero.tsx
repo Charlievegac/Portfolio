@@ -1,6 +1,7 @@
-import { Button, Container } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
+import AppButton from '../AppButton/AppButton';
 
-const HeroSection = (): JSX.Element => {
+const Hero = (): JSX.Element => {
   return (
     <section
       id="home"
@@ -27,12 +28,12 @@ const HeroSection = (): JSX.Element => {
             >
               SOFTWARE
               <br />
-              <span style={{ color: 'black' }}>ENGINEER</span>
+              <span className="text-black">ENGINEER</span>
             </h1>
             <p
               className="mb-0 mt-3 fw-semibold"
               style={{
-                maxWidth: '42rem',
+                maxWidth: '65rem',
                 color: '#f1f5f9',
                 fontSize: 'clamp(1rem, 1.6vw, 2rem)',
                 lineHeight: 1.52,
@@ -40,16 +41,21 @@ const HeroSection = (): JSX.Element => {
               }}
             >
               <span className="d-inline-block text-nowrap">
-                Current Junior @ USC Studying Computer Science and business administration.
+                Current Junior @ USC Studying Computer Science + Business Administration.
               </span>
               <br />
-              Passionate about developing Full-Stack applications, and projects
-              that help improve/ optimize/scale productive and business insights.
+              Passionate about <span style={{ color: '#22c55e' }}> Software </span> and <span style={{ color: '#22c55e' }}> Agriculture</span>.
+              <br />
+              Developing <span style={{ color: '#22c55e' }}> Full-Stack Applications </span> and other Projects
+              <br />
+              To Help Improve|Optimize|Scale <span style={{ color: '#22c55e' }}>Business Operations</span> and Provide Valuable Insights.
             </p>
             <div className="d-flex flex-wrap gap-3 mt-4 pt-1">
-              <Button
+              <AppButton
+                title="CONTACT"
                 href="#contact"
                 className="rounded-pill fw-bold"
+                action="open_contact_section"
                 style={{
                   minWidth: '6.9rem',
                   border: '1px solid rgba(255,255,255,0.72)',
@@ -59,12 +65,12 @@ const HeroSection = (): JSX.Element => {
                   letterSpacing: '0.08em',
                   padding: '0.55rem 1.3rem'
                 }}
-              >
-                CONTACT
-              </Button>
-              <Button
+              />
+              <AppButton
+                title="VIEW WORK"
                 href="#projects"
                 className="rounded-pill fw-bold"
+                action="open_projects_section"
                 style={{
                   minWidth: '6.9rem',
                   border: '1px solid rgba(255,255,255,0.72)',
@@ -74,31 +80,31 @@ const HeroSection = (): JSX.Element => {
                   letterSpacing: '0.08em',
                   padding: '0.55rem 1.3rem'
                 }}
-              >
-                VIEW WORK
-              </Button>
+              />
             </div>
           </div>
 
           <div className="mt-4 align-self-end text-end" style={{ maxWidth: '56rem' }}>
-              <h2 className="mb-1" style={{ fontSize: '1.75em', letterSpacing: '0.06em' }}>
-                More About Me:
-              </h2>
-              <ul
-                className="mb-0 ps-0"
-                style={{
-                  listStyle: 'disc inside',
-                  fontSize: '1.75em',
-                  fontWeight: 500,
-                  lineHeight: 1.45,
-                  letterSpacing: '0.03em'
-                }}
-              >
-                <li>I love agriculture, and working with my hands</li>
-                <li>The outdoors, and exploring the world</li>
-                <li>Eating, and trying new foods</li>
-                <li>Strategy video games</li>
-              </ul>
+            <h2 className="mb-1" style={{ fontSize: '1.75em', letterSpacing: '0.06em' }}>
+              More About Me:
+            </h2>
+            <ul
+              className="mb-0 ps-0"
+              style={{
+                listStyle: 'disc inside',
+                fontSize: '1.5em',
+                fontWeight: 500,
+                lineHeight: 1.45,
+                letterSpacing: '0.03em'
+              }}
+            >
+              <li>Fourth Generation Farmer From <span style={{ color: '#22c55e' }}>Jalisco</span>, Mexico</li>
+              <li>I Love <span style={{ color: '#22c55e' }}>Agriculture</span> and want to help make it more <span style={{ color: '#22c55e' }}>Sustainable</span> and <span style={{ color: '#22c55e' }}>Efficient</span></li>
+              <li>Cooking, Eating, and Trying New Restaurants <span style={{ color: '#22c55e' }}>"Emphasis on Eating"</span></li>
+              <li>Coperation and <span style={{ color: '#22c55e' }}>Strategy Games</span> like Rainbow Six Siege, Monopoly, etc.</li>
+              <li>Ideating and Creating Random Businesses at 2:00am with Friends</li>
+              <li>Exploring the <span style={{ color: '#22c55e' }}>Outdoors</span> and <span style={{ color: '#22c55e' }}>Nature</span></li>
+            </ul>
           </div>
         </div>
       </Container>
@@ -106,4 +112,4 @@ const HeroSection = (): JSX.Element => {
   );
 };
 
-export default HeroSection;
+export default Hero;
