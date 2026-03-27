@@ -32,7 +32,7 @@ const Resume = (): JSX.Element => {
           />
           <AppButton
             title="LINKEDIN →"
-            href="#"
+            href="https://www.linkedin.com/in/carlosjvega05/"
             className="rounded-pill fw-bold"
             action="open_linkedin"
             style={{
