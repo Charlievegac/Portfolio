@@ -103,7 +103,7 @@ const NavbarComponent = (): JSX.Element => {
         />
         <Navbar.Collapse id="portfolio-navbar-nav" className="justify-content-end">
           <Nav
-            className="d-flex align-items-center gap-2 p-2 rounded-pill mt-3 mt-lg-0"
+            className="portfolio-nav-menu d-flex flex-column flex-lg-row align-items-stretch align-items-lg-center gap-2 p-2 rounded-4 mt-3 mt-lg-0"
             style={{
               border: '1px solid rgba(255,255,255,0.45)',
               background: 'rgba(255,255,255,0.14)',
@@ -112,19 +112,19 @@ const NavbarComponent = (): JSX.Element => {
               boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.23)'
             }}
           >
-            <Nav.Link href="#home" onClick={() => setActiveHash('#home')} className="text-white rounded-pill px-3 py-2 fw-bold" style={navItemStyle('#home')}>
+            <Nav.Link href="#home" onClick={() => setActiveHash('#home')} className="text-white rounded-pill px-3 py-2 fw-bold text-center text-lg-start" style={navItemStyle('#home')}>
               ABOUT ME
             </Nav.Link>
-            <Nav.Link href="#knowledge" onClick={() => setActiveHash('#knowledge')} className="text-light rounded-pill px-3 py-2 fw-bold" style={navItemStyle('#knowledge')}>
+            <Nav.Link href="#knowledge" onClick={() => setActiveHash('#knowledge')} className="text-light rounded-pill px-3 py-2 fw-bold text-center text-lg-start" style={navItemStyle('#knowledge')}>
               SKILLS
             </Nav.Link>
-            <Nav.Link href="#projects" onClick={() => setActiveHash('#projects')} className="text-light rounded-pill px-3 py-2 fw-bold" style={navItemStyle('#projects')}>
+            <Nav.Link href="#projects" onClick={() => setActiveHash('#projects')} className="text-light rounded-pill px-3 py-2 fw-bold text-center text-lg-start" style={navItemStyle('#projects')}>
               PROJECTS
             </Nav.Link>
-            <Nav.Link href="#resume" onClick={() => setActiveHash('#resume')} className="text-light rounded-pill px-3 py-2 fw-bold" style={navItemStyle('#resume')}>
+            <Nav.Link href="#resume" onClick={() => setActiveHash('#resume')} className="text-light rounded-pill px-3 py-2 fw-bold text-center text-lg-start" style={navItemStyle('#resume')}>
               RESUME
             </Nav.Link>
-            <Nav.Link href="#contact" className="text-light rounded-pill px-3 py-2 fw-bold border border-light-subtle" style={{ fontSize: '0.75em' }}>
+            <Nav.Link href="#contact" onClick={() => setActiveHash('#contact')} className="text-light rounded-pill px-3 py-2 fw-bold border border-light-subtle text-center text-lg-start" style={navItemStyle('#contact')}>
               CONTACT
             </Nav.Link>
           </Nav>

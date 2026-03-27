@@ -129,7 +129,7 @@ const MarqueeRow = ({ row }: MarqueeRowProps): JSX.Element => {
         {repeatedItems.map((item, index) => (
           <span
             key={`${row.id}-${item}-${index}`}
-            className="d-inline-flex align-items-center justify-content-center rounded-pill"
+            className="d-inline-flex align-items-center justify-content-center rounded-pill skills-pill"
             style={{
               whiteSpace: 'nowrap',
               minWidth: '6.5rem',
@@ -154,7 +154,7 @@ const MarqueeRow = ({ row }: MarqueeRowProps): JSX.Element => {
 
 const Skills = (): JSX.Element => {
   return (
-    <section className="text-light" style={{ background: '#000000', paddingTop: '6rem', paddingBottom: '6rem' }}>
+    <section id="skills" className="text-light" style={{ background: '#000000', paddingTop: '6rem', paddingBottom: '6rem' }}>
       <div className="mx-auto" style={{ width: 'min(97%, 1500px)' }}>
         <h2
           className="fw-bold mb-4 text-uppercase"

@@ -96,7 +96,7 @@ const Knowledge = (): JSX.Element => {
           {repeatedCards.map((card, index) => (
             <article
               key={`${card.id}-${index}`}
-              className="h-100 d-flex flex-column flex-shrink-0"
+              className="h-100 d-flex flex-column flex-shrink-0 knowledge-card"
               style={{
                 width: 'min(31%, 23rem)',
                 minHeight: '22.5rem',

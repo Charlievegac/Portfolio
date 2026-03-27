@@ -46,7 +46,7 @@ const Projects = (): JSX.Element => {
         githubUrl: '',
         liveUrl: null
       },{
-        id: 'cancer-ml',
+        id: 'breast-cancer-ml',
         name: 'BREAST_CANCER_DETECTION',
         description: 'Breast Cancer Detection Utilizing ML (KNN)',
         date: '31-10-25',

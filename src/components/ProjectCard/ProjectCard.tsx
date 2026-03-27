@@ -19,7 +19,7 @@ const ProjectCard = ({ project, selected, onSelect }: ProjectCardProps): JSX.Ele
 
   return (
     <article
-    className="project-row d-flex justify-content-between align-items-center rounded"
+    className="project-row d-flex justify-content-between align-items-center rounded project-row-item"
     role="button"
     tabIndex={0}
     aria-pressed={selected}
@@ -40,7 +40,7 @@ const ProjectCard = ({ project, selected, onSelect }: ProjectCardProps): JSX.Ele
       color: selected ? '#111' : '#f8fafc'
     }}
   >
-    <div className="d-flex align-items-baseline gap-3 text-break">
+    <div className="d-flex align-items-baseline gap-3 text-break project-row-main">
       <h3
         className="mb-0 fw-bold"
         style={{ fontSize: 'clamp(1.2rem, 2vw, 2.2rem)', letterSpacing: '0.12em' }}
@@ -58,7 +58,7 @@ const ProjectCard = ({ project, selected, onSelect }: ProjectCardProps): JSX.Ele
         {project.description}
       </p>
     </div>
-    <div className="d-flex align-items-center" style={{ gap: '0.65rem' }}>
+    <div className="d-flex align-items-center project-row-actions" style={{ gap: '0.65rem' }}>
       <p
         className="mb-0"
         style={{ fontSize: 'clamp(1.05rem, 2vw, 2rem)', letterSpacing: '0.09em' }}

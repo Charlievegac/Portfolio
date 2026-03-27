@@ -57,6 +57,82 @@ select {
   }
 }
 
+@media (max-width: 991.98px) {
+  .portfolio-nav-menu .nav-link {
+    width: 100%;
+  }
+
+  .hero-section {
+    padding-top: 7.8rem !important;
+  }
+
+  .hero-about-block {
+    align-self: flex-start !important;
+    text-align: left !important;
+    margin-top: 1.25rem !important;
+    max-width: 100% !important;
+  }
+
+  .knowledge-card {
+    width: min(48%, 22rem) !important;
+  }
+
+  .project-row-item {
+    flex-wrap: wrap;
+    align-items: flex-start !important;
+  }
+
+  .project-row-main {
+    width: 100%;
+  }
+
+  .project-row-actions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .hero-content-main h1 {
+    font-size: clamp(1.85rem, 13vw, 3rem) !important;
+    line-height: 1.03 !important;
+  }
+
+  .hero-content-main p {
+    font-size: clamp(0.86rem, 3.6vw, 1.05rem) !important;
+    letter-spacing: 0.04em !important;
+  }
+
+  .hero-intro-first-line {
+    white-space: normal !important;
+  }
+
+  .hero-about-block ul {
+    font-size: 1rem !important;
+    line-height: 1.35 !important;
+  }
+
+  .hero-about-block h2 {
+    font-size: 1.15rem !important;
+  }
+
+  .knowledge-card {
+    width: min(84vw, 22rem) !important;
+    min-height: 20rem !important;
+  }
+
+  .skills-pill {
+    min-width: 5.2rem !important;
+    height: 1.95rem !important;
+    font-size: 1rem !important;
+    padding: 0 0.85rem !important;
+  }
+
+  #contact {
+    padding-top: 7rem !important;
+  }
+}
+
 a {
   text-decoration: none;
 }

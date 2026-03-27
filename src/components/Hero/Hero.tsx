@@ -7,7 +7,7 @@ const Hero = (): JSX.Element => {
   return (
     <section
       id="home"
-      className="position-relative min-vh-100 text-light"
+      className="position-relative min-vh-100 text-light hero-section"
       style={{
         paddingTop: '9.8rem',
         paddingBottom: '6rem',
@@ -19,7 +19,7 @@ const Hero = (): JSX.Element => {
     >
       <Container fluid className="mx-auto px-0" style={{ width: 'min(97%, 1500px)' }}>
         <div className="d-flex flex-column h-100">
-          <div className="d-flex flex-column align-items-start">
+          <div className="d-flex flex-column align-items-start hero-content-main">
             <h1
               className="m-0 fw-bold text-white"
               style={{
@@ -42,7 +42,7 @@ const Hero = (): JSX.Element => {
                 letterSpacing: '0.08em'
               }}
             >
-              <span className="d-inline-block text-nowrap">
+              <span className="d-inline-block hero-intro-first-line">
                 Current Junior @ USC Studying Computer Science + Business Administration.
               </span>
               <br />
@@ -86,7 +86,7 @@ const Hero = (): JSX.Element => {
             </div>
           </div>
 
-          <div className="mt-4 align-self-end text-end" style={{ maxWidth: '56rem' }}>
+          <div className="mt-4 align-self-end text-end hero-about-block" style={{ maxWidth: '56rem' }}>
             <h2 className="mb-1" style={{ fontSize: '1.75em', letterSpacing: '0.06em' }}>
               More About Me:
             </h2>
