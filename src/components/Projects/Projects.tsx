@@ -10,7 +10,7 @@ const Projects = (): JSX.Element => {
         id: 'chadi',
         name: 'CHADI',
         description: 'Create a Photo Based Date Album with Your Significant Other + Generate New Date Ideas with AI',
-        date: 'On-Going Project',
+        date: 'On-Going ',
         githubUrl: '',
         liveUrl: null
       },
@@ -18,7 +18,7 @@ const Projects = (): JSX.Element => {
         id: 'agrov-farm',
         name: 'AGROV_FARM',
         description: 'Part of AGROV. Operations Management Microservice for Farmers.',
-        date: 'On-Going Project',
+        date: 'On-Going',
         githubUrl: '',
         liveUrl: null
       },
@@ -26,7 +26,7 @@ const Projects = (): JSX.Element => {
         id: 'agrov-distributor',
         name: 'AGROV_DIST',
         description: 'Part of AGROV. Operations Management Microservice for Distirbutors (Managers|Engineers) and communicate with Farmers.',
-        date: 'On-Going Project',
+        date: 'On-Going',
         githubUrl: '',
         liveUrl: null
       },
