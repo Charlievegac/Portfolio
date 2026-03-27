@@ -2,6 +2,8 @@ import { Container } from 'react-bootstrap';
 import AppButton from '../AppButton/AppButton';
 
 const Hero = (): JSX.Element => {
+  const heroImageUrl = `${import.meta.env.BASE_URL}hero-field.webp`;
+
   return (
     <section
       id="home"
@@ -10,7 +12,7 @@ const Hero = (): JSX.Element => {
         paddingTop: '9.8rem',
         paddingBottom: '6rem',
         backgroundImage:
-          'linear-gradient(180deg, rgba(177, 185, 196, 0.35) 0%, rgb(0, 0, 0) 100%), url("/hero-field.webp")',
+          `linear-gradient(180deg, rgba(177, 185, 196, 0.35) 0%, rgb(0, 0, 0) 100%), url("${heroImageUrl}")`,
         backgroundSize: 'cover',
         backgroundPosition: 'center'
       }}

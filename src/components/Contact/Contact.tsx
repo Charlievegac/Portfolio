@@ -5,6 +5,10 @@ import AppButton from '../AppButton/AppButton';
 import Title from '../Title/Title';
 
 const Contact = (): JSX.Element => {
+  const instagramIcon = `${import.meta.env.BASE_URL}instagram-black.svg`;
+  const githubIcon = `${import.meta.env.BASE_URL}github-black.svg`;
+  const linkedinIcon = `${import.meta.env.BASE_URL}linkedin-black.png`;
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -162,13 +166,13 @@ const Contact = (): JSX.Element => {
               </p>
               <div className="d-flex align-items-center gap-2">
                 <a href="https://www.instagram.com/charlie.vegac/" target="_blank" aria-label="Instagram" className="d-inline-flex">
-                  <img src="/instagram-black.svg" alt="Instagram" style={{ width: '1rem', height: '1rem' }} />
+                  <img src={instagramIcon} alt="Instagram" style={{ width: '1rem', height: '1rem' }} />
                 </a>
                 <a href="https://github.com/Charlievegac" target="_blank" aria-label="GitHub" className="d-inline-flex">
-                  <img src="/github-black.svg" alt="GitHub" style={{ width: '1rem', height: '1rem' }} />
+                  <img src={githubIcon} alt="GitHub" style={{ width: '1rem', height: '1rem' }} />
                 </a>
                 <a href="https://www.linkedin.com/in/carlosjvega05/" target="_blank" aria-label="LinkedIn" className="d-inline-flex">
-                  <img src="/linkedin-black.png" alt="LinkedIn" style={{ width: '1rem', height: '1rem' }} />
+                  <img src={linkedinIcon} alt="LinkedIn" style={{ width: '1rem', height: '1rem' }} />
                 </a>
               </div>
             </div>

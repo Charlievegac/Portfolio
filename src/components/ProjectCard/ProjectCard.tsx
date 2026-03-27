@@ -13,8 +13,12 @@ export interface ProjectCardProps {
   onSelect: (projectId: string) => void;
 }
 
-const ProjectCard = ({ project, selected, onSelect }: ProjectCardProps): JSX.Element => (
-  <article
+const ProjectCard = ({ project, selected, onSelect }: ProjectCardProps): JSX.Element => {
+  const githubIcon = `${import.meta.env.BASE_URL}${selected ? 'github-black.svg' : 'github-white.svg'}`;
+  const externalIcon = `${import.meta.env.BASE_URL}${selected ? 'external-link-black.png' : 'external-link-white.png'}`;
+
+  return (
+    <article
     className="project-row d-flex justify-content-between align-items-center rounded"
     role="button"
     tabIndex={0}
@@ -73,11 +77,7 @@ const ProjectCard = ({ project, selected, onSelect }: ProjectCardProps): JSX.Ele
         }}
         aria-label={`${project.name} github`}
       >
-        <img
-          src={selected ? '/github-black.svg' : '/github-white.svg'}
-          alt="GitHub"
-          style={{ width: '1rem', height: '1rem' }}
-        />
+        <img src={githubIcon} alt="GitHub" style={{ width: '1rem', height: '1rem' }} />
       </a>
       {project.liveUrl != null && project.liveUrl !== '' ? (
         <a
@@ -92,15 +92,12 @@ const ProjectCard = ({ project, selected, onSelect }: ProjectCardProps): JSX.Ele
           }}
           aria-label={`${project.name} live link`}
         >
-          <img
-            src={selected ? '/external-link-black.png' : '/external-link-white.png'}
-            alt="External link"
-            style={{ width: '1rem', height: '1rem' }}
-          />
+          <img src={externalIcon} alt="External link" style={{ width: '1rem', height: '1rem' }} />
         </a>
       ) : null}
     </div>
-  </article>
-);
+    </article>
+  );
+};
 
 export default ProjectCard;

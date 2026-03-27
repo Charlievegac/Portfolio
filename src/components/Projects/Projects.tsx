@@ -3,6 +3,7 @@ import { Container } from 'react-bootstrap';
 import ProjectCard, { ProjectCardData } from '../ProjectCard/ProjectCard';
 
 const Projects = (): JSX.Element => {
+  const projectBgUrl = `${import.meta.env.BASE_URL}project-bg.png`;
   const projectRows: ProjectCardData[] = useMemo(
     () => [
       {
@@ -67,7 +68,7 @@ const Projects = (): JSX.Element => {
   const [selectedId, setSelectedId] = useState<string>(projectRows[0]?.id ?? '');
 
   return (
-    <section id="projects" className="text-light py-5" style={{ backgroundImage: 'url("/project-bg.png")', width: '100%', height: '100%', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+    <section id="projects" className="text-light py-5" style={{ backgroundImage: `url("${projectBgUrl}")`, width: '100%', height: '100%', backgroundSize: 'cover', backgroundPosition: 'center' }}>
       <div
         className="d-flex align-items-center"
         style={{
