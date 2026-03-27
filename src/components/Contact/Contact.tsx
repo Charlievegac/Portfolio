@@ -153,12 +153,14 @@ const Contact = (): JSX.Element => {
               <p className="mb-2 fw-semibold" style={{ fontSize: '0.82rem', letterSpacing: '0.08em' }}>
                 CONTACT
               </p>
-              <p className="mb-0" style={{ fontSize: '0.75rem' }}>
-                Phone: 321-552-1462
-              </p>
-              <p className="mb-0" style={{ fontSize: '0.75rem' }}>
-                Email: carlosvega@email.com
-              </p>
+              <div className="d-flex flex-column gap-1"> 
+                <a href="tel:+16263210424" className="mb-0 text-decoration-none text-black" style={{ fontSize: '0.75rem' }}>
+                  Phone: +1 (626) 321-0424
+                </a>
+              <a href="mailto:carlos.vegacervantes@gmail.com" className="mb-0 text-decoration-none text-black" style={{ fontSize: '0.75rem' }}>
+                Email: carlos.vegacervantes@gmail.com
+              </a> 
+              </div>
             </div>
             <div>
               <p className="mb-2 fw-semibold" style={{ fontSize: '0.82rem', letterSpacing: '0.08em' }}>
