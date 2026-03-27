@@ -16,7 +16,7 @@ const Projects = (): JSX.Element => {
       },
       {
         id: 'agrov-farm',
-        name: 'AGROV-FARM',
+        name: 'AGROV_FARM',
         description: 'Part of AGROV. Operations Management Microservice for Farmers.',
         date: 'On-Going Project',
         githubUrl: '',
@@ -24,7 +24,7 @@ const Projects = (): JSX.Element => {
       },
       {
         id: 'agrov-distributor',
-        name: 'AGROV-DIST',
+        name: 'AGROV_DIST',
         description: 'Part of AGROV. Operations Management Microservice for Distirbutors (Managers|Engineers) and communicate with Farmers.',
         date: 'On-Going Project',
         githubUrl: '',
@@ -55,7 +55,7 @@ const Projects = (): JSX.Element => {
       },
       {
         id: 'agropecuaria-vega',
-        name: 'AGROPECUARIA VEGA',
+        name: 'AGROPECUARIA_VEGA',
         description: 'Informitive Web App. Showcases my Family\'s Agricultural Business.',
         date: '12-31-24',
         githubUrl: 'https://github.com/Charlievegac/AgropecuariaVega',
