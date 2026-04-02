@@ -65,15 +65,14 @@ const ProjectCard = ({ project, selected, onSelect }: ProjectCardProps): JSX.Ele
         }
       }}
       style={{
-        gap: '1rem',
-        minHeight: hasPreviews ? undefined : '4.4rem',
-        padding: '0.6rem 1rem',
+        gap: '0.65rem',
+        padding: '0.45rem 0.85rem',
         border: `1px solid ${selected ? '#111827' : 'rgba(255,255,255,0.7)'}`,
         background: selected ? '#ffffff' : 'rgba(0,0,0,0.5)',
         color: selected ? '#111827' : '#f8fafc'
       }}
     >
-      <div className="d-flex w-100 justify-content-between align-items-center project-row-top" style={{ gap: '1rem' }}>
+      <div className="project-card-header-row d-flex w-100 justify-content-between align-items-center project-row-top" style={{ gap: '1rem' }}>
         <div className="d-flex align-items-baseline gap-3 text-break project-row-main flex-grow-1 min-w-0">
           <h3
             className="mb-0 fw-bold flex-shrink-0"
@@ -160,8 +159,7 @@ const ProjectCard = ({ project, selected, onSelect }: ProjectCardProps): JSX.Ele
                   <img
                     src={url}
                     alt={`${project.name} preview ${index + 1}`}
-                    className="rounded w-100 h-100"
-                    style={{ objectFit: 'cover', objectPosition: 'top center', display: 'block' }}
+                    className="rounded"
                     loading="eager"
                     decoding="async"
                   />

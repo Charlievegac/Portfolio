@@ -11,7 +11,7 @@ const Resume = (): JSX.Element => {
       className="d-flex align-items-start"
       style={{
         minHeight: 'auto',
-        padding: '0em 0 6rem',
+        paddingBottom: '6rem',
         background: '#000000'
       }}
     >
@@ -25,6 +25,22 @@ const Resume = (): JSX.Element => {
             rel="noopener noreferrer"
             className="rounded-pill fw-bold"
             action="view_resume"
+            style={{
+              border: '1px solid rgba(255,255,255,0.78)',
+              padding: '0.5rem 1.5rem',
+              fontSize: '0.82rem',
+              letterSpacing: '0.08em',
+              background: 'rgba(255,255,255,0.04)',
+              color: '#fff'
+            }}
+          />
+          <AppButton
+            title="GITHUB →"
+            href="https://github.com/Charlievegac"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-pill fw-bold"
+            action="open_github"
             style={{
               border: '1px solid rgba(255,255,255,0.78)',
               padding: '0.5rem 1.5rem',

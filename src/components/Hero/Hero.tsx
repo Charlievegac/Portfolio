@@ -46,9 +46,9 @@ const Hero = (): JSX.Element => {
                 Current Junior @ USC Studying Computer Science + Business Administration.
               </span>
               <br />
-              Passionate about <span style={{ color: '#22c55e' }}> Software </span> and <span style={{ color: '#22c55e' }}> Agriculture</span>.
+              Passionate about <span style={{ color: '#22c55e' }}> Software </span> and <span style={{ color: '#22c55e' }}> Agriculture</span> and <span style={{ color: '#22c55e' }}> Finance</span>.
               <br />
-              Developing <span style={{ color: '#22c55e' }}> Full-Stack Applications </span> and other Projects
+              Developing <span style={{ color: '#22c55e' }}> Full-Stack Applications </span> and other Projects.
               <br />
               To Help Improve|Optimize|Scale <span style={{ color: '#22c55e' }}>Business Operations</span> and Provide Valuable Insights.
             </p>
@@ -86,7 +86,7 @@ const Hero = (): JSX.Element => {
             </div>
           </div>
 
-          <div className="mt-4 align-self-end text-end hero-about-block" style={{ maxWidth: '56rem' }}>
+          <div className="mt-4 align-self-end text-end hero-about-block" style={{ maxWidth: '65rem' }}>
             <h2 className="mb-1" style={{ fontSize: '1.75em', letterSpacing: '0.06em' }}>
               More About Me:
             </h2>
@@ -102,6 +102,7 @@ const Hero = (): JSX.Element => {
             >
               <li>Fourth Generation Farmer From <span style={{ color: '#22c55e' }}>Jalisco</span>, Mexico</li>
               <li>I Love <span style={{ color: '#22c55e' }}>Agriculture</span> and want to help make it more <span style={{ color: '#22c55e' }}>Sustainable</span> and <span style={{ color: '#22c55e' }}>Efficient</span></li>
+              <li>Investing in Long-Term <span style={{ color: '#22c55e' }}>Undervalued</span> as well as <span style={{ color: '#22c55e' }}>High-Risk</span> Stocks "Very Counterintuitive"</li>
               <li>Cooking, Eating, and Trying New Restaurants <span style={{ color: '#22c55e' }}>"Emphasis on Eating"</span></li>
               <li>Coperation and <span style={{ color: '#22c55e' }}>Strategy Games</span> like Rainbow Six Siege, Monopoly, etc.</li>
               <li>Ideating and Creating Random Businesses at 2:00am with Friends</li>

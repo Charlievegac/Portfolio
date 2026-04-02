@@ -44,37 +44,53 @@ const Projects = (): JSX.Element => {
         githubUrl: null,
         liveUrl: null,
         previewFolder: 'glez',
-        previewFiles: ['placeholder.svg']
+        previewFiles: ['Glez_Hero.png', 'Glez_Services.png', 'Glez_Clients.png']
       },
       {
         id: 'cancer-ml',
         name: 'RNA_CANCER_CLASSIFICATION',
         description: 'RNA Cancer Classification Utilizing ML (Naive Bayes)',
-        date: '04-12-25',
+        date: '12-04-25',
         githubUrl: null,
-        liveUrl: null,
-        previewFolder: 'cancer-ml',
-        previewFiles: ['placeholder.svg']
+        liveUrl: null
       },
       {
         id: 'breast-cancer-ml',
         name: 'BREAST_CANCER_DETECTION',
         description: 'Breast Cancer Detection Utilizing ML (KNN)',
-        date: '31-10-25',
+        date: '10-31-25',
+        githubUrl: null,
+        liveUrl: null
+      },
+      {
+        id: 'trojan-club-management',
+        name: 'TROJAN_CLUB_MANAGEMENT',
+        description: 'Track meetings, documents, and member attendance.',
+        date: '05-10-25',
         githubUrl: null,
         liveUrl: null,
-        previewFolder: 'breast-cancer-ml',
-        previewFiles: ['placeholder.svg']
+        previewFolder: 'trojan-club-management',
+        previewFiles: ['TrojanClub_Login.png', 'TrojanClub_Calendar.png', 'TrojanClub_CreateEvent.png']
+      },
+      {
+        id: 'artsy-api-webapp',
+        name: 'ARTSY_API_WEBAPP',
+        description: 'Uses Artsy\'s public API to search for artists and view their information.',
+        date: '03-15-25',
+        githubUrl: null,
+        liveUrl: null,
+        previewFolder: 'artsy-api-webapp',
+        previewFiles: ['Artsy_ArtistSearch.png']
       },
       {
         id: 'agropecuaria-vega',
         name: 'AGROPECUARIA_VEGA',
         description: 'Informitive Web App. Showcases my Family\'s Agricultural Business.',
         date: '12-31-24',
-        githubUrl: 'https://github.com/Charlievegac/AgropecuariaVega',
-        liveUrl: 'https://charlievegac.github.io/AgropecuariaVega/',
+        githubUrl: '',
+        liveUrl: '',
         previewFolder: 'agropecuaria-vega',
-        previewFiles: ['placeholder.svg', 'placeholder.svg']
+        previewFiles: ['AgropecuariaVega_Hero.png', 'AgropecuariaVega_Services.png']
       }
     ],
     []
@@ -86,7 +102,7 @@ const Projects = (): JSX.Element => {
   };
 
   return (
-    <section id="projects" className="text-light py-5" style={{ backgroundImage: `url("${projectBgUrl}")`, width: '100%', height: '100%', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+    <section id="projects" className="text-light pb-5" style={{ backgroundImage: `url("${projectBgUrl}")`, width: '100%', height: '100%', backgroundSize: 'cover', backgroundPosition: 'center' }}>
       <div
         className="d-flex align-items-center"
         style={{
