@@ -46,6 +46,48 @@ select {
   transition: border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
 }
 
+.project-row.project-card {
+  transition:
+    border-color 0.28s ease,
+    box-shadow 0.28s ease,
+    background-color 0.28s ease,
+    color 0.24s ease,
+    transform 0.22s ease;
+}
+
+.project-row.project-card:active {
+  transform: scale(0.995);
+}
+
+.project-card-preview {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-card-preview--open {
+  grid-template-rows: 1fr;
+}
+
+.project-card-preview-measure {
+  min-height: 0;
+  overflow: hidden;
+}
+
+.project-card-preview-panel {
+  min-height: clamp(200px, 32vh, 380px);
+}
+
+.project-card-preview-thumb {
+  width: min(88vw, 560px);
+  height: clamp(180px, 30vh, 340px);
+}
+
+.project-card-preview-thumb img {
+  border: 1px solid rgba(15, 23, 42, 0.18);
+  box-sizing: border-box;
+}
+
 .project-row:hover {
   border-color: #22c55e !important;
   box-shadow: 0 0 0 0.2rem rgba(34, 197, 94, 0.18) !important;
@@ -131,6 +173,20 @@ select {
   #contact {
     padding-top: 7rem !important;
   }
+}
+
+.project-preview-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.35) transparent;
+}
+
+.project-preview-scroll::-webkit-scrollbar {
+  height: 8px;
+}
+
+.project-preview-scroll::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 999px;
 }
 
 a {

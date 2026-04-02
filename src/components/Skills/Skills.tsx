@@ -13,17 +13,18 @@ const techRows: TechRow[] = [
     label: 'Languages & Tools',
     direction: 'right',
     items: [
-      'TypeScript',
-      'JavaScript',
+      'C++',
       'Python',
       'Java',
-      'C++',
+      'JavaScript',
+      'TypeScript',
       'SQL',
       'MySQL',
       'PostgreSQL',
       'Git',
       'Docker',
-      'Linux'
+      'Figma',
+      'AWS',
     ]
   },
   {
@@ -32,15 +33,11 @@ const techRows: TechRow[] = [
     direction: 'left',
     items: [
       'React',
-      'Next.js',
-      'Node.js',
-      'Express',
       'Django',
-      'FastAPI',
+      'REST API',
       'Bootstrap',
       'Tailwind',
-      'Axios',
-      'Redux'
+      'Axios'
     ]
   },
   {
@@ -54,8 +51,6 @@ const techRows: TechRow[] = [
       'System Design',
       'REST APIs',
       'Authentication',
-      'Caching',
-      'Concurrency',
       'Testing',
       'CI/CD'
     ]

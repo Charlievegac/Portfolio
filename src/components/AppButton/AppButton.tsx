@@ -1,11 +1,13 @@
 import { Button } from 'react-bootstrap';
-import type { CSSProperties } from 'react';
+import type { CSSProperties, HTMLAttributeAnchorTarget } from 'react';
 
 interface AppButtonProps {
   title: string;
   action?: string;
   onClick?: (name: string, action: string) => void;
   href?: string;
+  target?: HTMLAttributeAnchorTarget;
+  rel?: string;
   type?: 'button' | 'submit' | 'reset';
   className?: string;
   style?: CSSProperties;
@@ -17,6 +19,8 @@ const AppButton = ({
   action,
   onClick,
   href,
+  target,
+  rel,
   type = 'button',
   className,
   style,
@@ -36,6 +40,8 @@ const AppButton = ({
   return (
     <Button
       href={href}
+      target={href ? target : undefined}
+      rel={href && target === '_blank' ? rel ?? 'noopener noreferrer' : rel}
       type={href ? undefined : type}
       className={`app-button rounded-pill fw-bold ${className ?? ''}`.trim()}
       style={{ ...baseStyle, ...style }}

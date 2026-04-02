@@ -3,6 +3,8 @@ import AppButton from '../AppButton/AppButton';
 import Title from '../Title/Title';
 
 const Resume = (): JSX.Element => {
+  const resumePdfUrl = `${import.meta.env.BASE_URL}Resume_CarlosJVega.pdf`;
+
   return (
     <div
       id="resume"
@@ -18,7 +20,9 @@ const Resume = (): JSX.Element => {
         <div className="d-flex flex-wrap align-items-center gap-2">
           <AppButton
             title="VIEW RESUME →"
-            href="#"
+            href={resumePdfUrl}
+            target="_blank"
+            rel="noopener noreferrer"
             className="rounded-pill fw-bold"
             action="view_resume"
             style={{
@@ -33,6 +37,8 @@ const Resume = (): JSX.Element => {
           <AppButton
             title="LINKEDIN →"
             href="https://www.linkedin.com/in/carlosjvega05/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="rounded-pill fw-bold"
             action="open_linkedin"
             style={{

@@ -2,11 +2,13 @@ import { useEffect, useMemo, useState } from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 
 const NavbarComponent = (): JSX.Element => {
-  const [activeHash, setActiveHash] = useState<string>(
-    typeof window !== 'undefined' && window.location.hash ? window.location.hash : '#home'
-  );
+  const initialHash =
+    typeof window !== 'undefined' && window.location.hash ? window.location.hash : '#home';
 
-  const sectionHashes = useMemo(() => ['#home', '#knowledge', '#skills', '#projects', '#resume', '#contact'], []);
+  const [activeHash, setActiveHash] = useState<string>(initialHash);
+
+  // Observed sections must match nav `href`s so active state always maps to a link.
+  const sectionHashes = useMemo(() => ['#home', '#knowledge', '#projects', '#resume', '#contact'], []);
 
   useEffect(() => {
     const onHashChange = (): void => {
@@ -29,6 +31,18 @@ const NavbarComponent = (): JSX.Element => {
     const scores = new Map<string, { ratio: number; centerDelta: number }>();
     const observer = new IntersectionObserver(
       (entries) => {
+        // First paint / no deep scroll: keep ABOUT ME (#home) active.
+        if (!window.location.hash) {
+          const knowledgeEl = document.getElementById('knowledge');
+          if (knowledgeEl) {
+            const knowledgeTop = knowledgeEl.getBoundingClientRect().top;
+            if (knowledgeTop > window.innerHeight * 0.42) {
+              setActiveHash('#home');
+              return;
+            }
+          }
+        }
+
         for (const entry of entries) {
           const viewportCenter = window.innerHeight / 2;
           const sectionCenter = entry.boundingClientRect.top + entry.boundingClientRect.height / 2;
@@ -79,7 +93,8 @@ const NavbarComponent = (): JSX.Element => {
 
   const navItemStyle = (hash: string): React.CSSProperties => ({
     letterSpacing: '0.08em',
-    fontSize: activeHash === hash ? '1em' : '0.75em'
+    fontSize: '1em',
+    opacity: activeHash === hash ? 1 : 0.72
   });
 
   return (
@@ -112,19 +127,44 @@ const NavbarComponent = (): JSX.Element => {
               boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.23)'
             }}
           >
-            <Nav.Link href="#home" onClick={() => setActiveHash('#home')} className="text-white rounded-pill px-3 py-2 fw-bold text-center text-lg-start" style={navItemStyle('#home')}>
+            <Nav.Link
+              href="#home"
+              onClick={() => setActiveHash('#home')}
+              className={`rounded-pill px-3 py-2 fw-bold text-center text-lg-start ${activeHash === '#home' ? 'text-white' : 'text-light'}`}
+              style={navItemStyle('#home')}
+            >
               ABOUT ME
             </Nav.Link>
-            <Nav.Link href="#knowledge" onClick={() => setActiveHash('#knowledge')} className="text-light rounded-pill px-3 py-2 fw-bold text-center text-lg-start" style={navItemStyle('#knowledge')}>
+            <Nav.Link
+              href="#knowledge"
+              onClick={() => setActiveHash('#knowledge')}
+              className={`rounded-pill px-3 py-2 fw-bold text-center text-lg-start ${activeHash === '#knowledge' ? 'text-white' : 'text-light'}`}
+              style={navItemStyle('#knowledge')}
+            >
               SKILLS
             </Nav.Link>
-            <Nav.Link href="#projects" onClick={() => setActiveHash('#projects')} className="text-light rounded-pill px-3 py-2 fw-bold text-center text-lg-start" style={navItemStyle('#projects')}>
+            <Nav.Link
+              href="#projects"
+              onClick={() => setActiveHash('#projects')}
+              className={`rounded-pill px-3 py-2 fw-bold text-center text-lg-start ${activeHash === '#projects' ? 'text-white' : 'text-light'}`}
+              style={navItemStyle('#projects')}
+            >
               PROJECTS
             </Nav.Link>
-            <Nav.Link href="#resume" onClick={() => setActiveHash('#resume')} className="text-light rounded-pill px-3 py-2 fw-bold text-center text-lg-start" style={navItemStyle('#resume')}>
+            <Nav.Link
+              href="#resume"
+              onClick={() => setActiveHash('#resume')}
+              className={`rounded-pill px-3 py-2 fw-bold text-center text-lg-start ${activeHash === '#resume' ? 'text-white' : 'text-light'}`}
+              style={navItemStyle('#resume')}
+            >
               RESUME
             </Nav.Link>
-            <Nav.Link href="#contact" onClick={() => setActiveHash('#contact')} className="text-light rounded-pill px-3 py-2 fw-bold border border-light-subtle text-center text-lg-start" style={navItemStyle('#contact')}>
+            <Nav.Link
+              href="#contact"
+              onClick={() => setActiveHash('#contact')}
+              className={`rounded-pill px-3 py-2 fw-bold border border-light-subtle text-center text-lg-start ${activeHash === '#contact' ? 'text-white' : 'text-light'}`}
+              style={navItemStyle('#contact')}
+            >
               CONTACT
             </Nav.Link>
           </Nav>
